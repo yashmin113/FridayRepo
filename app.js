@@ -258,3 +258,34 @@ arr.forEach((item) => {
 });
 
 console.log(arr.map((x) => x));//[1,empty,3]
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout 1");
+
+  Promise.resolve().then(() => {
+    console.log("Promise inside timeout");
+  });
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("Promise 1");
+});
+
+(async function () {
+  console.log("Async Start");
+
+  await null;
+
+  console.log("Async End");
+})();
+
+console.log("End");
+//start
+//Async Start
+//Async End 
+//End
+//1
+//Timeout 1
+//Promise inside the Timeout
