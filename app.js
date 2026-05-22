@@ -284,8 +284,9 @@ Promise.resolve().then(() => {
 console.log("End");
 //start
 //Async Start
-//Async End 
+
 //End
+// async end 
+//promise inside the timeout
 //1
 //Timeout 1
-//Promise inside the Timeout
